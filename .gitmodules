@@ -3,7 +3,8 @@
 	url = https://github.com/pybind/pybind11
 [submodule "extern/rayx"]
 	path = extern/rayx
-	url = https://github.com/hz-b/rayx
+	url = https://github.com/Atraxus/rayx
+	branch = fix/ue112-rml-materials
 [submodule "extern/nanobind"]
 	path = extern/nanobind
 	url = https://github.com/wjakob/nanobind
