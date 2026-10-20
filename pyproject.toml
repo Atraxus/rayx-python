@@ -45,7 +45,10 @@ archs = ["x86_64"]
 build = ["*manylinux*"]
 # Free-threaded CPython does not support the stable ABI used by this wheel.
 skip = ["cp*t-*"]
-manylinux-x86_64-image = "gitea.valentinstoecker.de/vls/manylinux_cuda"
+# Built from ./Dockerfile by CI. CI overrides this with the image tagged for
+# the current Dockerfile (CIBW_MANYLINUX_X86_64_IMAGE); this default is for
+# local cibuildwheel runs.
+manylinux-x86_64-image = "ghcr.io/hz-b/rayx-python/manylinux_cuda:latest"
 test-requires = ["pytest", "pyright"]
 test-command = "cd /tmp && python -m pytest -q {project}/tests"
 
